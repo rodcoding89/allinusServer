@@ -1,0 +1,117 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f26adc0ff05, pid=1578, tid=1594
+#
+# JRE version: OpenJDK Runtime Environment 18.9 (11.0.8+10) (build 11.0.8+10)
+# Java VM: OpenJDK 64-Bit Server VM 18.9 (11.0.8+10, mixed mode, tiered, compressed oops, g1 gc, linux-amd64)
+# Problematic frame:
+# C  [libjimage.so+0x2f05]
+#
+# Core dump will be written. Default location: Core dumps may be processed with "/lib/systemd/systemd-coredump %P %u %g %s %t 9223372036854775808 %e" (or dumping to /home/pc-nina/eclipse-workspace/AllinUsServer/core.1578)
+#
+# If you would like to submit a bug report, please visit:
+#   https://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -agentlib:jdwp=transport=dt_socket,suspend=y,address=localhost:43265 -javaagent:/home/pc-nina/.var/app/org.eclipse.Java/eclipse/configuration/org.eclipse.osgi/210/0/.cp/lib/javaagent-shaded.jar -Dfile.encoding=UTF-8 --module-path=/home/pc-nina/eclipse-workspace/AllinUsServer/bin:/home/pc-nina/eclipse-workspace/AllinUsServer/externLib/sqlite-jdbc-3.30.1.jar -Djdk.module.main=AllinUsServer AllinUsServer/AllInUsServer.ChatServer
+
+Host: AMD E1-6010 APU with AMD Radeon R2 Graphics, 2 cores, 3G, ID=org.gnome.Platform
+Time: Fri Sep 18 19:48:44 2020 CEST elapsed time: 419 seconds (0d 0h 6m 59s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f26a818f800):  JavaThread "Signal Dispatcher" daemon [_thread_in_vm, id=1594, stack(0x00007f26889b7000,0x00007f2688ab8000)]
+
+Stack: [0x00007f26889b7000,0x00007f2688ab8000],  sp=0x00007f2688ab50a0,  free space=1016k
+Native frames: (J=compiled Java code, A=aot compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libjimage.so+0x2f05]
+C  [libjimage.so+0x3bce]
+C  [libjimage.so+0x40bc]  JIMAGE_FindResource+0xfc
+V  [libjvm.so+0x5e593c]
+V  [libjvm.so+0x5e81cc]
+V  [libjvm.so+0xe2636d]
+V  [libjvm.so+0xe24e7a]
+V  [libjvm.so+0xe27536]
+V  [libjvm.so+0x699376]
+V  [libjvm.so+0x88c531]
+j  jdk.internal.misc.Signal.dispatch(I)V+25 java.base@11.0.8
+v  ~StubRoutines::call_stub
+V  [libjvm.so+0x895359]
+V  [libjvm.so+0x89425a]
+V  [libjvm.so+0xc0619e]
+V  [libjvm.so+0xe5ec27]
+V  [libjvm.so+0xe5b1cb]
+V  [libjvm.so+0xc17eee]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  jdk.internal.misc.Signal.dispatch(I)V+25 java.base@11.0.8
+v  ~StubRoutines::call_stub
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x00007f269f903858
+
+Register to memory mapping:
+
+RAX=0x0000000000000e0f is an unknown value
+RBX=0x00007f2688ab5151 is pointing into the stack for thread: 0x00007f26a818f800
+RCX=0x00007f2688ab5173 is pointing into the stack for thread: 0x00007f26a818f800
+RDX=0x0000000000000e0f is an unknown value
+RSP=0x00007f2688ab50a0 is pointing into the stack for thread: 0x00007f26a818f800
+RBP=0x00007f2688ab50c0 is pointing into the stack for thread: 0x00007f26a818f800
+RSI=0x0 is NULL
+RDI=0x00007f26adc15038: <offset 0x0000000000008038> in /app/openjdk-11/lib/libjimage.so at 0x00007f26adc0d000
+R8 =0x00007f269f90001c is an unknown value
+R9 =0x65746e692f6b646a is an unknown value
+R10=0x73696d2f6c616e72 is an unknown value
+R11=0x6c616e6769532f63 is an unknown value
+R12=0x00000000000083c2 is an unknown value
+R13=0x00007f2688ab5150 is pointing into the stack for thread: 0x00007f26a818f800
+R14=0x0 is NULL
+R15=0x00007f2688ab5150 is pointing into the stack for thread: 0x00007f26a818f800
+
+
+Registers:
+RAX=0x0000000000000e0f, RBX=0x00007f2688ab5151, RCX=0x00007f2688ab5173, RDX=0x0000000000000e0f
+RSP=0x00007f2688ab50a0, RBP=0x00007f2688ab50c0, RSI=0x0000000000000000, RDI=0x00007f26adc15038
+R8 =0x00007f269f90001c, R9 =0x65746e692f6b646a, R10=0x73696d2f6c616e72, R11=0x6c616e6769532f63
+R12=0x00000000000083c2, R13=0x00007f2688ab5150, R14=0x0000000000000000, R15=0x00007f2688ab5150
+RIP=0x00007f26adc0ff05, EFLAGS=0x0000000000010212, CSGSFS=0x002b000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007f2688ab50a0)
+0x00007f2688ab50a0:   0000000000000000 00007f2688ab61f0
+0x00007f2688ab50b0:   00007f26a80240a0 00007f2688ab5150
+0x00007f2688ab50c0:   00007f2688ab5130 00007f26adc10bce
+0x00007f2688ab50d0:   0000000000000000 0000000000000000 
+
+Instructions: (pc=0x00007f26adc0ff05)
+0x00007f26adc0fe05:   5d 98 e8 b4 f2 ff ff 4c 8b 5d 98 4d 01 df 4d 85
+0x00007f26adc0fe15:   f6 74 08 4c 89 f7 e8 30 f3 ff ff 44 03 65 90 e9
+0x00007f26adc0fe25:   3f fe ff ff 0f 1f 80 00 00 00 00 41 8b 10 41 89
+0x00007f26adc0fe35:   55 00 41 8b 54 00 fc 41 89 54 05 fc e9 8a fc ff
+0x00007f26adc0fe45:   ff 66 2e 0f 1f 84 00 00 00 00 00 ba 0a 00 00 00
+0x00007f26adc0fe55:   e9 f8 fc ff ff 41 0f b7 54 00 fe 66 41 89 54 05
+0x00007f26adc0fe65:   fe e9 65 fc ff ff 0f 1f 44 00 00 0f b6 17 89 f0
+0x00007f26adc0fe75:   89 f1 4c 8d 47 01 84 d2 74 18 90 69 c9 93 01 00
+0x00007f26adc0fe85:   01 49 83 c0 01 31 d1 41 0f b6 50 ff 84 d2 75 eb
+0x00007f26adc0fe95:   89 c8 25 ff ff ff 7f c3 90 66 90 48 85 d2 0f 84
+0x00007f26adc0fea5:   e1 00 00 00 55 48 89 e5 41 55 41 54 41 89 cc 53
+0x00007f26adc0feb5:   48 83 ec 08 85 c9 0f 84 c1 00 00 00 49 89 f5 48
+0x00007f26adc0fec5:   8d 5e 01 0f b6 36 49 89 d0 40 84 f6 0f 84 a1 00
+0x00007f26adc0fed5:   00 00 48 89 d9 b8 93 01 00 01 90 69 d0 93 01 00
+0x00007f26adc0fee5:   01 48 83 c1 01 40 0f b6 c6 0f b6 71 ff 31 d0 40
+0x00007f26adc0fef5:   84 f6 75 e7 25 ff ff ff 7f 31 d2 41 f7 f4 89 d0
+0x00007f26adc0ff05:   41 8b 34 80 48 8b 07 ff 50 20 85 c0 7f 1d 74 6d
+0x00007f26adc0ff15:   f7 d0 41 89 c0 48 83 c4 08 44 89 c0 5b 41 5c 41
+0x00007f26adc0ff25:   5d 5d c3 0f 1f 84 00 00 00 00 00 41 0f b6 4d 00
+0x00007f26adc0ff35:   89 c6 84 c9 74 1b 0f 1f 44 00 00 69 f6 93 01 00
+0x00007f26adc0ff45:   01 48 83 c3 01 31 ce 0f b6 4b ff 84 c9 75 ec 89
+0x00007f26adc0ff55:   f0 25 ff ff ff 7f 31 d2 48 83 c4 08 41 f7 f4 5b
+0x00007f26adc0ff65:   41 5c 41 5d 5d 41 89 d0 44 89 c0 c3 0f 1f 80 00
+0x00007f26adc0ff75:   00 00 00 b8 93 01 00 01 e9 7c ff ff ff 41 b8 ff
+0x00007f26adc0ff85:   ff ff ff eb 90 41 83 c8 ff 44 89 c0 c3 66 66 2e
+0x00007f26adc0ff95:   0f 1f 84 00 00 00 00 00 0f 1f 00 eb 19 66 0f 1f
+0x00007f26adc0ffa5:   44 00 00 0f b6 16 84 d2 74 13 38 c2 75 1d 48 83
+0x00007f26adc0ffb5:   c7 01 48 83 c6 01 0f b6 07 84 c0 75 e6 48 89 f8

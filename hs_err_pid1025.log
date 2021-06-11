@@ -1,0 +1,40 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007fcbc6ed0f05, pid=1025, tid=1041
+#
+# JRE version: OpenJDK Runtime Environment 18.9 (11.0.8+10) (build 11.0.8+10)
+# Java VM: OpenJDK 64-Bit Server VM 18.9 (11.0.8+10, mixed mode, tiered, compressed oops, g1 gc, linux-amd64)
+# Problematic frame:
+# C  [libjimage.so+0x2f05]
+#
+# Core dump will be written. Default location: Core dumps may be processed with "/lib/systemd/systemd-coredump %P %u %g %s %t 9223372036854775808 %e" (or dumping to /home/pc-nina/eclipse-workspace/AllinUsServer/core.1025)
+#
+# If you would like to submit a bug report, please visit:
+#   https://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -agentlib:jdwp=transport=dt_socket,suspend=y,address=localhost:38545 -javaagent:/home/pc-nina/.var/app/org.eclipse.Java/eclipse/configuration/org.eclipse.osgi/210/0/.cp/lib/javaagent-shaded.jar -Dfile.encoding=UTF-8 --module-path=/home/pc-nina/eclipse-workspace/AllinUsServer/bin:/home/pc-nina/eclipse-workspace/AllinUsServer/externLib/sqlite-jdbc-3.30.1.jar -Djdk.module.main=AllinUsServer AllinUsServer/AllInUsServer.ChatServer
+
+Host: AMD E1-6010 APU with AMD Radeon R2 Graphics, 2 cores, 3G, ID=org.gnome.Platform
+Time: Thu Sep 17 15:12:42 2020 CEST elapsed time: 4304 seconds (0d 1h 11m 44s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007fcbc018f800):  JavaThread "Signal Dispatcher" daemon [_thread_in_vm, id=1041, stack(0x00007fcb99b86000,0x00007fcb99c87000)]
+
+Stack: [0x00007fcb99b86000,0x00007fcb99c87000],  sp=0x00007fcb99c840a0,  free space=1016k
+Native frames: (J=compiled Java code, A=aot compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libjimage.so+0x2f05]
+C  [libjimage.so+0x3bce]
+C  [libjimage.so+0x40bc]  JIMAGE_FindResource+0xfc
+V  [libjvm.so+0x5e593c]
+V  [libjvm.so+0x5e81cc]
+V  [libjvm.so+0xe2636d]
+V  [libjvm.so+0xe24e7a]
+V  [libjvm.so+0xe27536]
+V  [libjvm.so+0x699376]
+V  [libjvm.so+0x88c531]
+j  jdk.internal.misc.Signal.dispatch(I)V+25 java.base@11.0.8
